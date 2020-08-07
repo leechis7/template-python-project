@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Unitary tests with code coverage",
+            "type": "shell",
+            "command": "${workspaceRoot}/.venv/bin/python3 -m pytest --cov-report xml:cov.xml --cov my_module tests -v",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+             }
+
+             
+        }
+    ]
+}
